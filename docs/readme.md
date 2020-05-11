@@ -11,8 +11,10 @@ This uses the shortcut image created above to create the image that will host th
 
     ./d_build.sh adamtorres/markdown-doc-server
 
-## d_\run.sh
-This runs the image built in the previous command.  The entrypoint will clone or pull the specified repo.  It stays on the master branch at the moment.  Restarting the container is enough to get it to pull changes.
+The image name will be the name of the repo with "-docs" appended.
+
+## d\_run.sh
+This runs the image built in the previous command.  The entrypoint will clone or pull the specified repo.  It stays on the master branch at the moment.  Restarting the container is enough to get it to pull changes.  The argument for this script is the same as the build script for simplicity.
 The site is hosted at port 8009.
 It does not default to any file name so you have to know the files ahead of time.
 

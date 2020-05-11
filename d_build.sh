@@ -5,4 +5,7 @@ if [[ -z "$GITREPO" ]]; then
     echo "  Ex: $0 adamtorres/markdown-doc-server"
     exit 9999
 fi
-docker build --tag example-docs:latest --build-arg GITREPO="$GITREPO" -f Dockerfile  .
+
+IMAGE="${GITREPO#*"/"}-docs"
+docker build --tag ${IMAGE}:latest --build-arg GITREPO="$GITREPO" -f Dockerfile  .
+echo "The image name is '${IMAGE}'"
