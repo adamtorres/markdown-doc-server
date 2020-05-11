@@ -22,3 +22,32 @@ Ideas for improvements:
 
 * Provide some kind of file index.  Either as a default page (no filename specified) or as a popout on the edge of all pages.
 * Add an arg to the d\_build.sh and d\_run.sh scripts to specify the branch to use.  The build script would save the specified branch as a default while the run script would be able to override if desired.
+
+Example usage including building the shortcut:
+
+    :::bash
+    ./d_shortcut.sh
+    Sending build context to Docker daemon  9.728kB
+        Step 1/4 : FROM python:3.8-slim
+         ---> 56930ef6f6a2
+        Step 2/4 : ENV PYTHONUNBUFFERED 1
+         ---> Using cache
+         ---> 4edd126d4de4
+        ... snip ...
+    
+    ./d_build.sh adamtorres/markdown-doc-server
+        Sending build context to Docker daemon  18.43kB
+        Step 1/9 : FROM python-shortcut-alpine:latest
+         ---> 1f59922f6155
+        Step 2/9 : ARG GITREPO
+         ---> Using cache
+         ---> b77a002008c1
+        ... snip ...
+    
+    ./d_run.sh adamtorres/markdown-doc-server
+        cloning https://github.com/adamtorres/markdown-doc-server.git
+        Cloning into '.'...
+        Bottle v0.12.18 server starting up (using WSGIRefServer())...
+        Listening on http://0.0.0.0:8009/
+        Hit Ctrl-C to quit.
+
