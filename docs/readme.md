@@ -27,7 +27,7 @@ Example usage including building the shortcut:
 
     :::bash
     ./d_shortcut.sh
-    Sending build context to Docker daemon  9.728kB
+        Sending build context to Docker daemon  9.728kB
         Step 1/4 : FROM python:3.8-slim
          ---> 56930ef6f6a2
         Step 2/4 : ENV PYTHONUNBUFFERED 1
