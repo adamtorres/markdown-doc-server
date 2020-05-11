@@ -1,0 +1,65 @@
+*.py[cod]
+
+# Packages
+*.egg
+*.egg-info
+markdownserver.dat
+dist
+build
+docs/_build
+eggs
+parts
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+/htmlcov
+
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+.projectile
+.ropeproject
+
+
+# Random things that looks ok to include here.
+.*.sw[op]
+/.pytest_cache/
+/.tags
+/.cache/
+/TAGS
+
+
+# pyenv etc
+.python-version
+.venv
+
+# dotenv
+.env
+
+# Pycharm
+.idea/
+
+# Mac
+.DS_store
+
+# Static Files
+public/
+
+# Tmp Files
+tmp/
