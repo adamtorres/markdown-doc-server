@@ -1,3 +1,7 @@
-git+https://github.com/adamtorres/markdown-server@localcustomizations#egg=markdownserver
+# The pypi py-gfm does not support Markdown>=3 and hasn't had a commit in 2yrs.
+# Someone recently made changes on a fork and submitted a PR.
+# PR at https://github.com/Zopieux/py-gfm/pull/19
+git+https://github.com/ChanTsune/py-gfm@c974dfa10ab92e3110c9dd524d4b13f2eb119999#egg=py-gfm
+git+https://github.com/adamtorres/markdown-server@localcustomizations#egg=markdown-server
 git+https://github.com/adamtorres/pygments@localcustomizations#egg=Pygments
 pymdown-extensions
